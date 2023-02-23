@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>DeltaForce.OpenAI.DependencyInjection.Extentions</id>
+    <version>1.0.0</version>
+    <title>DeltaForce.OpenAI.DependencyInjection.Extentions</title>
+    <authors>DeltaForce Team</authors>
+    <icon>logo.png</icon>
+    <projectUrl>https://github.com/HaruTzuki/openai-hackathon</projectUrl>
+    <description>Shared class for dependency injection.</description>
+    <releaseNotes>Shared class for dependency injection.</releaseNotes>
+    <tags>openai, class, dotnet7, csharp</tags>
+    <repository type="git" url="https://github.com/HaruTzuki/openai-hackathon" />
+    <dependencies>
+      <group targetFramework="net7.0">
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Http" version="7.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
