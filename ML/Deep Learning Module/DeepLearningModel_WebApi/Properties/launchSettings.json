@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "DeepLearningModel_WebApi": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:60837;http://localhost:60838"
+    }
+  }
+}
