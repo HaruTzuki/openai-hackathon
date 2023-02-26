@@ -2,13 +2,14 @@
 using Plugin.Media;
 using System.IO.Compression;
 using System.Net;
+using Microsoft.Maui.Controls;
+using System;
 
 namespace DeltaForce.OpenAI.App.Mobile
 {
     public partial class MainPage : ContentPage
     {
         private readonly HttpClient _httpClient;
-        private string localFilePath;
         private FileResult fileResult;
 
         public MainPage(IHttpClientFactory httpClientFactory)
@@ -25,11 +26,20 @@ namespace DeltaForce.OpenAI.App.Mobile
                 if (fileResult != null)
                 {
                     // save the file into local storage
-                    localFilePath = Path.Combine(FileSystem.CacheDirectory, fileResult.FileName);
-                    UploadedOrSelectedImage.Source = localFilePath;
-                    UploadedOrSelectedImage.
+
+                    var stream = await fileResult.OpenReadAsync();
+                    var bytes = new byte[stream.Length];
+                    await stream.ReadAsync(bytes);
+
+                    UploadedOrSelectedImage.Source = ImageSource.FromStream( () =>  new MemoryStream(bytes));
+                    
                 }
             }
+        }
+
+        private async void FromStorageClicked(object sender, EventArgs e)
+        {
+
         }
 
         private async void UploadPhoto()

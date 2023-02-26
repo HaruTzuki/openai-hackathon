@@ -12,6 +12,11 @@
                 HorizontalOptions="Center"
                 Text="Take photo" />
 
+            <Button
+                Clicked="FromStorageClicked"
+                HorizontalOptions="Center"
+                Text="Upload a Photo" />
+
             <Image
                 x:Name="UploadedOrSelectedImage"
                 HeightRequest="300"
