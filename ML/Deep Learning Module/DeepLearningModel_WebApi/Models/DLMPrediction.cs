@@ -4,5 +4,6 @@
         public string LeafStatus { get; set; }
         public string ScorePerc { get; set; }
         public float Score { get; set; }
+        public string GPT3ProposedTreatment { get; set; }
     }
 }
