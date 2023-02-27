@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>$(AssemblyName)</Title>
+    <Authors>DeltaForce Team</Authors>
+    <Company>DeltaForce Team</Company>
+    <Description>Shared class bewteen projects.</Description>
+    <PackageProjectUrl>https://github.com/HaruTzuki/openai-hackathon</PackageProjectUrl>
+    <PackageIcon>logo.png</PackageIcon>
+    <RepositoryUrl>https://github.com/HaruTzuki/openai-hackathon</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>openai, class, dotnet6, csharp</PackageTags>
+    <PackageReleaseNotes>Shared class bewteen projects.</PackageReleaseNotes>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="2.0.0" />
+    <PackageReference Include="Microsoft.ML.Vision" Version="2.0.0" />
+    <PackageReference Include="SciSharp.TensorFlow.Redist" Version="2.3.1" />
+  </ItemGroup>
+  <ItemGroup Label="DLModel">
+    <None Include="..\..\..\Assets\logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="DLModel.consumption.cs">
+      <DependentUpon>DLModel.mbconfig</DependentUpon>
+    </None>
+    <None Include="DLModel.mlnet">
+      <DependentUpon>DLModel.mbconfig</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DLModel.training.cs">
+      <DependentUpon>DLModel.mbconfig</DependentUpon>
+    </None>
+  </ItemGroup>
+</Project>

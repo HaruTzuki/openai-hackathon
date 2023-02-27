@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>DeltaForce.OpenAI.DeepLearingModelCL</id>
+    <version>1.0.0</version>
+    <title>DeltaForce.OpenAI.DeepLearingModelCL</title>
+    <authors>DeltaForce Team</authors>
+    <icon>logo.png</icon>
+    <projectUrl>https://github.com/HaruTzuki/openai-hackathon</projectUrl>
+    <description>Shared class bewteen projects.</description>
+    <releaseNotes>Shared class bewteen projects.</releaseNotes>
+    <tags>openai, class, dotnet6, csharp</tags>
+    <repository type="git" url="https://github.com/HaruTzuki/openai-hackathon" />
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="Microsoft.ML" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.ML.Vision" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="SciSharp.TensorFlow.Redist" version="2.3.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
