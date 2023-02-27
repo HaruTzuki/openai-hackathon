@@ -7,38 +7,31 @@ using Microsoft.ML.Data;
 using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using System.Text;
+using DeepLearningModel_WebApi;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 // Configure app
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddPredictionEnginePool<DeepLearningModel.ModelInput, DeepLearningModel.ModelOutput>()
     .FromFile("DeepLearningModel.mlnet");
-
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Description = "Docs for my API", Version = "v1" });
+builder.Services.AddSwaggerGen(c => {
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Deep Learing Model API", Description = "This api provides a state-of-the-art solution for plant disease detection from leaf images. It uses a custom deep learning model that have trained on a dataset of 202.076 images of diseased and healthy plant leaves. The model can identify 12 crop species (Apple, Blueberry, Cherry, Corn, Grape, Orange, Peach, Pepper bell, Potato, Raspberry, Soybean and Tomato) and their corresponding diseases with an accuracy 98.7%. The api accepts leaf images as input and returns the predicted crop species and disease name as output. You can use this api to diagnose your plants and take appropriate actions if any disease is found.", Version = "v1" });
 });
 var app = builder.Build();
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment()) {
+    app.UseSwagger();
 
-app.UseSwagger();
-
-app.UseSwaggerUI(c =>
-{
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-});
-
-// Define prediction route & handler
-app.MapPost("/predict",
-    async (PredictionEnginePool<DeepLearningModel.ModelInput, DeepLearningModel.ModelOutput> predictionEnginePool, string imagePath) =>
-    {
-        var input = new DeepLearningModel.ModelInput()
-        {
-            ImageSource = File.ReadAllBytes(imagePath),
-        };
-
-        return await Task.FromResult(predictionEnginePool.Predict(input));
+    app.UseSwaggerUI(c => {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Deep Learing Model API V1");
     });
 
-// Run app
+}
+app.UseHttpsRedirection();
+app.UseAuthorization();
+app.MapControllers();
 app.Run();

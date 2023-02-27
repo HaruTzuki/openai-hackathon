@@ -15,3 +15,4 @@ Console.WriteLine($"{"-----",-40}{"-----",-20}");
 foreach (var score in sortedScoresWithLabel) {
     Console.WriteLine($"{score.Key,-40}{score.Value,-20}");
 }
+Console.ReadKey();
