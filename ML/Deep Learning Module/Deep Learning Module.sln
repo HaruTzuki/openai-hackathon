@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Deep Learning Module", "Deep Learning Module\Deep Learning Module.csproj", "{6ACB5CDD-E514-425A-9AA7-A8392789F8B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeltaForce.OpenAI.DeepLearingModelCL", "ClassLibrary\DeltaForce.OpenAI.DeepLearingModelCL.csproj", "{034BB1CA-A4C0-4C22-89D4-48F5E3FF5E40}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeepLearningModel_WebApi", "DeepLearningModel_WebApi\DeepLearningModel_WebApi.csproj", "{DFDD75E3-40AB-429D-9BD3-3FA8A05E95C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Deep Learning Module", "ConsoleApp\Deep Learning Module.csproj", "{0AC3E2BF-408A-46DD-9D4C-A4555B3C3903}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeltaForce.OpenAI.DeepLearingModelCL", "ClassLibrary1\DeltaForce.OpenAI.DeepLearingModelCL.csproj", "{99B377FA-9396-4862-AEE1-313BAFDCFDFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeepLearningModel_WebApi", "WebApi\DeepLearningModel_WebApi.csproj", "{3CBFB982-C964-441E-9564-7EA1DBE284C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6ACB5CDD-E514-425A-9AA7-A8392789F8B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6ACB5CDD-E514-425A-9AA7-A8392789F8B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6ACB5CDD-E514-425A-9AA7-A8392789F8B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6ACB5CDD-E514-425A-9AA7-A8392789F8B0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DFDD75E3-40AB-429D-9BD3-3FA8A05E95C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DFDD75E3-40AB-429D-9BD3-3FA8A05E95C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DFDD75E3-40AB-429D-9BD3-3FA8A05E95C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DFDD75E3-40AB-429D-9BD3-3FA8A05E95C0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{99B377FA-9396-4862-AEE1-313BAFDCFDFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{99B377FA-9396-4862-AEE1-313BAFDCFDFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{99B377FA-9396-4862-AEE1-313BAFDCFDFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{99B377FA-9396-4862-AEE1-313BAFDCFDFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{034BB1CA-A4C0-4C22-89D4-48F5E3FF5E40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{034BB1CA-A4C0-4C22-89D4-48F5E3FF5E40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{034BB1CA-A4C0-4C22-89D4-48F5E3FF5E40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{034BB1CA-A4C0-4C22-89D4-48F5E3FF5E40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AC3E2BF-408A-46DD-9D4C-A4555B3C3903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AC3E2BF-408A-46DD-9D4C-A4555B3C3903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AC3E2BF-408A-46DD-9D4C-A4555B3C3903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AC3E2BF-408A-46DD-9D4C-A4555B3C3903}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CBFB982-C964-441E-9564-7EA1DBE284C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CBFB982-C964-441E-9564-7EA1DBE284C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CBFB982-C964-441E-9564-7EA1DBE284C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CBFB982-C964-441E-9564-7EA1DBE284C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
