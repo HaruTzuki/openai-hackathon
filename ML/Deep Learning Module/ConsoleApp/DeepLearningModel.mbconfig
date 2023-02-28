@@ -45,7 +45,7 @@
     },
     "Schema": "e0 * e1 * e2",
     "MetricName": "MicroAccuracy",
-    "ModelFilePath": "C:\\Users\\Obrelix\\source\\repos\\HaruTzuki\\openai-hackathon\\ML\\Deep Learning Module\\Deep Learning Module\\DeepLearningModel.mlnet"
+    "ModelFilePath": "C:\\Users\\Obrelix\\source\\repos\\HaruTzuki\\openai-hackathon\\ML\\Deep Learning Module\\ConsoleApp\\DeepLearningModel.mlnet"
   },
   "Type": "TrainingConfig",
   "Version": 3,
