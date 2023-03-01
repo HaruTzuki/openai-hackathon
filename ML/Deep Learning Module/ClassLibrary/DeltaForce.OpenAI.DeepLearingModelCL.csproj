@@ -14,7 +14,13 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>openai, class, dotnet6, csharp</PackageTags>
     <PackageReleaseNotes>Shared class bewteen projects.</PackageReleaseNotes>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
+    <Version>1.0.0.1</Version>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="DLModel.mbconfig" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ML" Version="2.0.0" />
     <PackageReference Include="Microsoft.ML.Vision" Version="2.0.0" />
@@ -25,15 +31,20 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="DLModel.consumption.cs">
+    <EmbeddedResource Include="DLModel.consumption.cs">
       <DependentUpon>DLModel.mbconfig</DependentUpon>
-    </None>
-    <None Include="DLModel.mlnet">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DLModel.mbconfig">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DLModel.mlnet">
       <DependentUpon>DLModel.mbconfig</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="DLModel.training.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DLModel.training.cs">
       <DependentUpon>DLModel.mbconfig</DependentUpon>
-    </None>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
