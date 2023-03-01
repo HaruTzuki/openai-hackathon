@@ -76,9 +76,9 @@ async Task GetImagesFromDalle(int loopCounter) {
                 Bitmap? img = Base64StringToBitmap(base64);
                 if (img != null) {
                     long unixTime = ((DateTimeOffset)DateTime.Now).ToUnixTimeSeconds();
-                    string path = @"c:\Plant_Diseases_Images\" + pd.DiseaseName.Replace(' ', '-');
+                    string path = @"c:\Plant_Leaf_Diseases_Dataset\" + pd.DiseaseName.Replace(' ', '-');
                     DirectoryInfo di = Directory.CreateDirectory(path);
-                    string filename = $"{pd.PlantName.Replace(' ', '-')}_{pd.DiseaseName.Replace(' ', '-')}_{unixTime}_{i}.png";
+                    string filename = $"{pd.PlantName.Replace(' ', '_')}___{pd.DiseaseName.Replace(' ', '_')}_{unixTime}_{i}.png";
                     filename = di.FullName + "\\" + filename;
                     img.Save(filename, ImageFormat.Png);
                     Console.WriteLine("Saving image to " + filename);
