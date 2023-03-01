@@ -19,7 +19,7 @@ namespace DeltaForce.OpenAI.DeepLearingModelCL {
             var sortedScoresWithLabel = DLModel.PredictAllLabels(input);
             if (!sortedScoresWithLabel.Any()) return null;
             foreach (var score in sortedScoresWithLabel) {
-                if (score.Value < 0.01) continue;
+                if (score.Value < 0.25) continue;
                 DLMPredictionModel dLMPrediction = new DLMPredictionModel() {
                     LeafType = score.Key.Split("___").First().Replace('_', ' ').Replace(",", string.Empty),
                     LeafStatus = score.Key.Split("___").Last().Replace('_', ' '),
