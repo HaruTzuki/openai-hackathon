@@ -4,6 +4,8 @@ using System.IO.Compression;
 using System.Net;
 using Microsoft.Maui.Controls;
 using System;
+using Newtonsoft.Json;
+using DeltaForce.OpenAI.App.Mobile.Libraries;
 
 namespace DeltaForce.OpenAI.App.Mobile
 {
@@ -51,10 +53,11 @@ namespace DeltaForce.OpenAI.App.Mobile
                 using var sourceStream = await fileResult.OpenReadAsync();
                 content.Add(new StreamContent(sourceStream), "file", fileResult.FileName);
 
-                var request = new HttpRequestMessage(HttpMethod.Post, "api/Images/ImageAnalyser") { Content = content };
+                var request = new HttpRequestMessage(HttpMethod.Post, "/api/Image/ImageAnalyser") { Content = content };
 
                 var result = await _httpClient.SendAsync(request);
 
+                var openAIResult = JsonConvert.DeserializeObject<IEnumerable<OpenAIResult>>(await result.Content.ReadAsStringAsync());
             }
         }
 
