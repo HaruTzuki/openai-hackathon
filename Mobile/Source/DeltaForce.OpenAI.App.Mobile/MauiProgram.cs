@@ -12,7 +12,7 @@ namespace DeltaForce.OpenAI.App.Mobile
 
 			builder.Services.AddHttpClients(new Dictionary<string, string>()
 			{
-				{"TempAPI", "http://192.168.254.93/" }
+				{"TempAPI", "https://openai.tedollconsulting.gr/" }
 			});
 
 			builder.Services.AddSingleton<MainPage>();
