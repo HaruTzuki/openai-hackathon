@@ -20,9 +20,7 @@
             <Image
                 x:Name="UploadedOrSelectedImage"
                 HeightRequest="300"
-                HorizontalOptions="Center"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                Source="dotnet_bot.png" />
+                HorizontalOptions="Center"/>
 
             <Button
                 x:Name="BtnUploadThePhoto"

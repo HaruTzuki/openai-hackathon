@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DeltaForce.OpenAI.App.Mobile.Result"
+             Title="Result">
+    <VerticalStackLayout>
+        <Image
+            x:Name="LeafPicture"
+            HeightRequest="300"
+            HorizontalOptions="Center"
+            Margin="0, 25, 0, 0"/>
+
+        <Label 
+            x:Name="LblLeafStatus" 
+            FontSize="20" 
+            HorizontalTextAlignment="Center"
+            Margin="0, 25, 0, 0"/>
+
+        <Label 
+            x:Name="LblLeafType"
+            FontSize="20"
+            HorizontalTextAlignment="Center"
+            Margin="0, 5, 0, 0"/>
+
+        <Label
+            x:Name="LblScore" 
+            FontSize="20" 
+            HorizontalTextAlignment="Center"
+            Margin="0, 5, 0, 0"/>
+
+        <Label
+            x:Name="LblSolution" 
+            FontSize="17" 
+            HorizontalTextAlignment="Center"
+            Margin="0, 25, 0, 0"/>
+
+    </VerticalStackLayout>
+</ContentPage>

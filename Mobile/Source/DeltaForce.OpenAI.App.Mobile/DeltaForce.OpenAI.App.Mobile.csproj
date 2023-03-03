@@ -15,7 +15,7 @@
 		<ApplicationTitle>DeltaForce.OpenAI.App.Mobile</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.deltaforce.openai.app.mobile</ApplicationId>
+		<ApplicationId>com.deltaforce.deltaforce.openai.app.mobile</ApplicationId>
 		<ApplicationIdGuid>fd2b763c-2f1d-4efc-bf97-015e65877f29</ApplicationIdGuid>
 
 		<!-- Versions -->
@@ -28,14 +28,14 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+		<PackageIcon>logo.png</PackageIcon>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
-
+		<MauiIcon Include="Resources\AppIcon\logo.png" ForegroundFile="Resources\AppIcon\logo.png" Color="#512BD4" />
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+		<MauiSplashScreen Include="Resources\AppIcon\logo.png" Color="#512BD4" BaseSize="128,128" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -53,6 +53,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Include="..\..\..\Assets\logo.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="1.0.2" />
 		<PackageReference Include="DeltaForce.OpenAI.DependencyInjection.Extentions" Version="1.0.0" />
 		<PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.9" />
@@ -66,6 +73,13 @@
 	  <MauiXaml Update="Layouts\HistoryView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Result.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Resources\AppIcon\logo.png" ForegroundFile="Resources\AppIcon\logo.png" Color="#512BD4" />
 	</ItemGroup>
 
 </Project>

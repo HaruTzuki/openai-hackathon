@@ -11,7 +11,7 @@
             Icon="network.svg">
             <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
         </Tab>
-        <Tab Title="History"
+        <!--<Tab Title="History"
             Icon="network.svg">
             <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
         </Tab>
@@ -22,7 +22,7 @@
         <Tab Title="Login"
             Icon="network.svg">
             <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
-        </Tab>
+        </Tab>-->
     </TabBar>
 
 </Shell>
